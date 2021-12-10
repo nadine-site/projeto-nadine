@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500&display=swap');
+
+$header-green: #4fbd6b;
+$background-green: #deffe6;
+
+body {
+    margin: 0;
+    padding: 0;
+    clear: none;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif; 
+    background: #4FBDB6;
+
+    overflow-x: hidden;
+}
+
+.principal {
+    width: 100vw;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    background-color: $header-green;
+    color: #fff;
+
+    padding: 10px 20px;
+}
+
+.navbar {
+    max-width: 90vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    & ul li {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 300;
+        font-size: 1.2em;
+        letter-spacing: 3px;
+
+        a:hover, a:active {
+            color: #4fbd6b;
+            background: #fff;
+        }
+    }
+
+    .logo h3 {
+        margin: 0;
+
+        font-family: 'Outfit', sans-serif;
+        font-weight: 300;
+        font-size: 1.8em;
+
+        letter-spacing: 3px;
+
+        .rot {
+            display: inline-block;
+            transform: rotate(-30deg);
+            position: relative;
+            right: 7px;
+            margin: 0;
+
+            font-family: 'Outfit', sans-serif;
+
+        }
+    }
+
+    .menu {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+
+        li {
+            margin-left: 30px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                padding: 10px 15px;
+            }
+        }
+    } 
+}
+
+.hamburguer {
+    width: 30px;
+    height: 30px;
+    left: 20%;
+
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0;
+
+    position: relative;
+    display: none;
+
+    cursor: pointer;  
+}
+
+.hamburguer:after {
+    content: "";
+    background-color: #fff;
+
+    position: absolute;
+    top: 35%;
+    left: 15%;
+
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+}
+
+.hamburguer:before {
+    content: "";
+    background-color: #fff;
+
+    position: absolute;
+    top: 55%;
+    left: 15%;
+
+    width: 70%;
+    height: 5%;
+    border-radius: 5px;
+}
+
+//Início da configuração da página inicial (index)
+
+.content {
+    background: #deffe6;
+    padding: 10%;
+    padding-top: 90px;
+    padding-bottom: 5%;
+    justify-content: center;
+
+    img {
+        width: 65%;
+    }
+
+    label {
+        display: block;
+
+        a {
+            color: $header-green;
+            font-size: .7em;
+        }
+    }
+
+    h1, h2, h3, strong {
+        color: #415245;
+    }
+
+    p, ul li, dl dd {
+        color: #557a5e;
+    }
+
+    iframe {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    header {
+        // margin-bottom: 10px;
+    }
+
+    .navbar {
+        max-width: 1200px;
+
+        // margin: 20%;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 10px 20px;
+        }
+
+        .hamburguer {
+            display: block;
+            z-index: 999;
+        }
+
+        .menu {
+            max-width: 250px;
+
+            position: fixed;
+            flex-direction: column;
+            top: 50px;
+            right: -100%;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 100px 20px;
+
+            background-color: #4fbd6b;
+
+            display: none;
+
+            li {
+                margin-bottom: 40px;
+            }
+
+            &.active {
+                right: 0;
+                display: block;
+            }
+    }
+
+    .content {
+        padding: 10px;
+        padding-top: 90px;
+        // margin-top: 40px;
+    }
+}
+
+//Fim da configuração da página principal
+
+//Configurações adicionais da página de ajuda
+
+.back {
+    position: relative;
+    border-radius: 26px;
+    background: #deffe6;
+    box-shadow:  10px -10px 10px -10px #c8e6cf;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    text-align: initial;
+
+    max-width: 80%;
+
+    ul {
+        list-style: none;
+
+        li i {
+            margin: 10px;
+        }
+    }
+}
+
+.final {
+    background: $header-green;
+    margin: auto;
+    max-width: 90%;
+
+    padding: 10px;
+
+    border-radius: 20px;
+
+    ul {
+        list-style: none;
+        
+        
+        li {
+            color: $background-green;
+        }
+    }
+
+    h3 {
+        color: #fff;
+    }
+
+    .call {
+        background: $background-green;
+        display: inline;
+        color: $header-green;
+
+        border-radius: 5px;
+
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+//Configuração da página de Quem somos
+
+.teachers {
+    text-align: center;
+}
+
+footer {
+    background: #4FBDB6;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .diagnostic {
+        font-weight: bold;
+    }
+
+    .support {
+
+        img {
+            width: 10%;
+        }
+    }
+
+    
+}

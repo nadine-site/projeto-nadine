@@ -204,7 +204,7 @@ header {
     display: block;
   }
   .content {
-    padding: 10px;
+    padding: 60px;
     padding-top: 90px;
   }
 }
@@ -234,12 +234,15 @@ header {
   background: #4fbd6b;
   margin: auto;
   max-width: 90%;
-  padding: 10px;
+  padding: 20px;
   border-radius: 20px;
+  text-align: initial;
 }
 
 .final ul {
   list-style: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .final ul li {
@@ -284,6 +287,7 @@ footer .diagnostic {
 }
 
 footer .support img {
-  width: 10%;
+  width: 25%;
+  max-width: 100px; 
 }
 /*# sourceMappingURL=style.css.map */

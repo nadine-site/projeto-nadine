@@ -135,8 +135,10 @@ header {
           justify-content: center;
 }
 
-.content img {
-  width: 65%;
+.content img,
+.content iframe {
+  width: 100%;
+  max-width: 800px;
 }
 
 .content label {
@@ -154,10 +156,6 @@ header {
 
 .content p, .content ul li, .content dl dd {
   color: #557a5e;
-}
-
-.content iframe {
-  width: 65%;
 }
 
 @media screen and (max-width: 960px) {
@@ -204,7 +202,7 @@ header {
     display: block;
   }
   .content {
-    padding: 60px;
+    padding: 40px;
     padding-top: 90px;
   }
 }
